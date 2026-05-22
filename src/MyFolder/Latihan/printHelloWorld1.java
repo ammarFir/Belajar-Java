@@ -1,4 +1,4 @@
-package MyFolder.Latihan;
+package myfolder.latihan;
 
 public class printHelloWorld1 {
     public static void main(String[] args) {

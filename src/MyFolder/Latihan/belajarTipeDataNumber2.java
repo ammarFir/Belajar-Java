@@ -1,4 +1,4 @@
-package MyFolder.Latihan;
+package myfolder.latihan;
 
 public class belajarTipeDataNumber2 {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class belajarTipeDataNumber2 {
         // Underscore cuma sebagai Pemisah
         int amount = 1_000_000;
         int angkaPemisah = 1_0_0_0;
-        // kek gin juga boleh
+        // kek gini juga boleh
 
     }
 }
