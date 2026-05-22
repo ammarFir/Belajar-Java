@@ -1,6 +1,6 @@
 package myfolder.latihan;
 
-public class TypeDataBoolean {
+public class TypeDataBoolean6 {
 
     public static void main(String[] args) {
 
