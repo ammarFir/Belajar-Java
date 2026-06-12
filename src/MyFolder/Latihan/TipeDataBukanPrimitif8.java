@@ -25,8 +25,14 @@ public class TipeDataBukanPrimitif8 {
         int iniInteger = 100;
         // tipe data primitif
 
-        Integer iniInteger2 = iniInteger;
+        Integer iniObject = iniInteger;
         // dan ini akan mengkonversinya mnjadi bukan primitif
+
+        short iniShort = iniObject.shortValue();
+        long iniLongg = iniObject.longValue();
+        float iniFloat = iniObject.floatValue();
+        // ini semua adalah konversi widening ato apa itu namanya klo gasaalah
+        // jadi masing2 punya methodnya agar bisa dikonversi untuk ubah objectnya
 
     }
 

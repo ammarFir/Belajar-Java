@@ -22,5 +22,7 @@ public class belajarTipeDataNumber2 {
         int angkaPemisah = 1_0_0_0;
         // kek gini juga boleh
 
+        // sdlkslkdnslgitu
+
     }
 }
