@@ -6,12 +6,20 @@ public class Challenge10 {
 
     public static void main(String[] args) {
 
+        sapaUser();
+
         Scanner input = new Scanner(System.in);
+
+        int panjang;
+        int lebar;
         System.out.print("Masukkan Panjang ");
         panjang = input.nextInt();
+        System.out.print("Masukkan Lebar ");
+        lebar = input.nextInt();
 
-        sapaUser();
-        luasPersegiPanjang();
+        input.close();
+
+        luasPersegiPanjang(panjang, lebar);
     }
 
     public static void sapaUser() {
@@ -21,19 +29,14 @@ public class Challenge10 {
         System.out.print("Masukkan nama anda :");
         nama = input.nextLine();
 
-        input.close();
-
         System.out.println("Halo " + nama + ", selamat belajar method");
 
     }
 
-    public static int luasPersegiPanjang(int hasil) {
+    public static int luasPersegiPanjang(int panjang, int lebar) {
 
-        int panjang = 0;
-        int lebar = 0;
-
-        hasil = panjang * lebar;
-
+        int hasil = panjang * lebar;
+        System.out.println(hasil);
         return hasil;
     }
 
