@@ -20,6 +20,7 @@ public class belajarTipeDataNumber2 {
         // Underscore cuma sebagai Pemisah
         int amount = 1_000_000;
         int angkaPemisah = 1_0_0_0;
+
         // kek gini juga boleh
 
         // sdlkslkdnslgitu
