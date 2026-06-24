@@ -6,12 +6,8 @@ import mvc.view.MahasiswaView;
 public class MahasiswaController {
 
     public void tampilkanMahasiswa() {
-        Mahasiswa mhs = new Mahasiswa();
+        Mahasiswa mhs = new Mahasiswa("Udin", 24, "Farmasi");
         MahasiswaView mView = new MahasiswaView();
-
-        mhs.nama = "Udin";
-        mhs.umur = 25;
-        mhs.jurusan = "Kesehatan";
 
         mView.tampilkanData(mhs);
 
