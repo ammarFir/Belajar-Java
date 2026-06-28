@@ -28,4 +28,24 @@ public class Produk {
         return stok;
     }
 
+    public void setNamaProduk(String namaProduk) {
+        this.namaProduk = namaProduk;
+    }
+
+    public void setHarga(double harga) {
+        if (harga < 0) {
+            System.out.println("Harga Tidak bisa  negatif");
+        } else {
+            this.harga = harga;
+        }
+    }
+
+    public void setStok(int stok) {
+        if (stok < 0) {
+            System.out.println("stok tidak boleh negatif");
+        } else {
+            this.stok = stok;
+        }
+    }
+
 }
