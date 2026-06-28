@@ -7,7 +7,12 @@ import mvc.view.ProdukView;
 
 public class ProdukController {
     public void tampilkanProduk() {
+        // isi data (object) menggunakan constructor
         Produk produk = new Produk("Laptop Gaming", 15000, 10);
+
+        // set ubah stok
+        produk.setStok(20);
+
         ProdukView produkView = new ProdukView();
 
         produkView.tampilkanProduk(produk);
