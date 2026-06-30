@@ -7,6 +7,7 @@ import java.util.*;
 public class BukuController {
 
     public void tampilkanBuku() {
+        // sccanner input
         Scanner input = new Scanner(System.in);
 
         System.out.println("Masukkan judul buku");
@@ -15,6 +16,7 @@ public class BukuController {
         System.out.println("Masukkan nama penulis");
         String nama = input.nextLine();
 
+        // looping masukkan tahun
         int tahun;
         do {
             System.out.print("Masukkan tahun :");
@@ -27,9 +29,12 @@ public class BukuController {
         } while (tahun < 1990);
         input.close();
 
+        // jadikan buku jadi object beserta vari didalamnya
         Buku buku = new Buku(judul, nama, tahun);
 
+        // tarik view ke dalam
         BukuView bView = new BukuView();
+        // pakai fungsinya
         bView.tampilkanBuku(buku);
     }
 
