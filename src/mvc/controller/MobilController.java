@@ -10,8 +10,8 @@ public class MobilController {
 
         String merk;
         do {
-            System.out.println("Masukkan merk : ");
-            merk = input.next();
+            System.out.print("Masukkan merk : ");
+            merk = input.nextLine();
 
             if (merk.trim().equals("")) {
                 System.out.println("Merk tidak boleh kosong ! ");
@@ -21,7 +21,7 @@ public class MobilController {
         String warna;
         do {
             System.out.println("Masukkan warna : ");
-            warna = input.next();
+            warna = input.nextLine();
 
             if (warna.trim().equals("")) {
                 System.out.println("Warna tidak boleh kosong ! ");
