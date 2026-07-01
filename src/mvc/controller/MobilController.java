@@ -37,24 +37,26 @@ public class MobilController {
                 System.out.println("Tahun tidak boleh dibawah 2000 !");
             }
         } while (tahun < 2000);
-        
 
         int kecepatan;
-        int minimal = 0;
+        int maxKecepatan = 300;
+        if (tahun >= 2020) {
+            maxKecepatan = 320;
+        }
         do {
-            System.out.println("Masukkan kecepatan");
+            System.out.println("Masukkan kecepatan mobil : ");
             kecepatan = input.nextInt();
-
-            if () {
-                System.out.println("Kecepatan tidak boleh lebih dari 320");
-            } else if (minimal  < 0 && kec) {
-                
+            if (kecepatan < 0 || kecepatan > maxKecepatan) {
+                System.out.println("Kecepatan tidak valid");
             }
+        } while (kecepatan < 0 || kecepatan > maxKecepatan);
+        input.close();
 
-    {
-                System.out.println("Tahun tidak boleh dibawah 2000 !");
-            }
-        } while (tahun < 2000);
-        
+        // bkin object mogil
+        Mobil mobil = new Mobil(merk, warna, tahun, kecepatan);
+
+        // objecy view
+        MobilView mView = new MobilView();
+        mView.tampilkanMobil(mobil);
     }
 }

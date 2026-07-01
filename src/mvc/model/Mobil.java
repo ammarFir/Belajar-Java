@@ -4,8 +4,9 @@ public class Mobil {
     private String merk, warna;
     private int tahun, kecepatan;
 
-    private Mobil(String merk, int tahun, int kecepatan) {
+    public Mobil(String merk, String warna, int tahun, int kecepatan) {
         this.merk = merk;
+        this.warna = warna;
         this.tahun = tahun;
         this.kecepatan = kecepatan;
     }
