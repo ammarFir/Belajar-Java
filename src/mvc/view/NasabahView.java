@@ -5,8 +5,8 @@ import mvc.model.Nasabah;
 public class NasabahView {
 
     public void tampilkanData(Nasabah nasabah) {
-        System.out.println("Masukkan nama : " + nasabah.getNama());
-        System.out.println("Masukkan no rekening : " + nasabah.getNoRekening());
-        System.out.println("Masukkan saldo : " + nasabah.getSaldo());
+        System.out.println("Nama : " + nasabah.getNama());
+        System.out.println("No rekening : " + nasabah.getNoRekening());
+        System.out.printf("Saldo : " + nasabah.getSaldo());
     }
 }
