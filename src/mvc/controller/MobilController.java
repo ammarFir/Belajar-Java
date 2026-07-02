@@ -10,7 +10,7 @@ public class MobilController {
 
         String merk;
         do {
-            System.out.print("Masukkan merk : ");
+            System.out.print("Masukkan merk mobil : ");
             merk = input.nextLine();
 
             if (merk.trim().equals("")) {
@@ -20,7 +20,7 @@ public class MobilController {
 
         String warna;
         do {
-            System.out.println("Masukkan warna : ");
+            System.out.print("Masukkan warna mobil : ");
             warna = input.nextLine();
 
             if (warna.trim().equals("")) {
@@ -30,7 +30,7 @@ public class MobilController {
 
         int tahun;
         do {
-            System.out.println("Masukkan tahun");
+            System.out.print("Masukkan tahun mobil : ");
             tahun = input.nextInt();
 
             if (tahun < 2000) {
