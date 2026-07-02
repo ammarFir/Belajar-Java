@@ -9,6 +9,6 @@ public class MobilView {
         System.out.println("Merk : " + mobil.getMerk());
         System.out.println("Warna : " + mobil.getWarna());
         System.out.println("Tahun : " + mobil.getTahun());
-        System.out.println("Masukkan kecepatan mobil : " + mobil.getKecepatan() + "km/h");
+        System.out.println("Kecepatan : " + mobil.getKecepatan() + "km/h");
     }
 }

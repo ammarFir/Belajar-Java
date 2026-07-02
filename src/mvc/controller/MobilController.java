@@ -44,7 +44,7 @@ public class MobilController {
             maxKecepatan = 320;
         }
         do {
-            System.out.println("Masukkan kecepatan mobil : ");
+            System.out.print("Masukkan kecepatan mobil : ");
             kecepatan = input.nextInt();
             if (kecepatan < 0 || kecepatan > maxKecepatan) {
                 System.out.println("Kecepatan tidak valid");
