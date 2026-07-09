@@ -37,14 +37,15 @@ public class MenuRestoran {
 
     public double hitungDiskon() {
 
+        double hargaDiskon = 0;
         if (rating == 5) {
-            harga = (20 * 100) / harga;
+            hargaDiskon = harga * 20 / 100;
         } else if (rating == 4) {
-            harga = (10 * 100) / harga;
+            hargaDiskon = harga * 10 / 100;
         } else if (rating <= 3) {
-            harga = harga;
+            hargaDiskon = harga;
         }
 
-        return harga;
+        return harga - hargaDiskon;
     }
 }
