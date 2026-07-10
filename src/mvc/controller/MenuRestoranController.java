@@ -40,6 +40,7 @@ public class MenuRestoranController {
                 System.out.println(" Rating harus <= 5");
             }
         } while (rating < 1 || rating > 5);
+        input.close();
 
         MenuRestoran menuRestoran = new MenuRestoran(menu, harga, rating);
 
