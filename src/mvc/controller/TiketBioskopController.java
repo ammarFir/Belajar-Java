@@ -40,6 +40,7 @@ public class TiketBioskopController {
         // iterasi jam
         int jam;
         do {
+
             System.out.print("Masukkan jam : ");
             jam = input.nextInt();
 
@@ -51,7 +52,7 @@ public class TiketBioskopController {
             }
 
         } while (jam < 10 || jam > 22);
-
+        // new
         double harga;
         do {
             System.out.print("Masukkan harga : ");
