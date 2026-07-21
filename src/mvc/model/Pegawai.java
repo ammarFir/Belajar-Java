@@ -20,11 +20,11 @@ public class Pegawai {
         return nip;
     }
 
-    public double gajiPokok() {
+    public double getGajiPokok() {
         return gajiPokok;
     }
 
-    public int jamLembur() {
+    public int getJamLembur() {
         return jamLembur;
     }
 
@@ -45,6 +45,10 @@ public class Pegawai {
     }
 
     public double hitungGajiBersih() {
+        double gajiLembur = jamLembur * 50000;
+        double pajak = (gajiPokok + gajiLembur) * 0.05;
+        double gajiBersih = (gajiPokok + gajiLembur) - pajak;
 
+        return gajiBersih;
     }
 }
