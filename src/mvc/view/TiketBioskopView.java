@@ -4,11 +4,11 @@ import mvc.model.TiketBioskop;
 
 public class TiketBioskopView {
     public void tampilkanTiket(TiketBioskop tBioskop) {
-        System.out.print("===Data Tiket===");
-        System.out.print("Film : " + tBioskop.getFilm());
-        System.out.print("Hari : " + tBioskop.getHari());
-        System.out.print("Jam : " + tBioskop.getJam());
-        System.out.print("Harga Awal : " + tBioskop.getHarga());
-        System.out.print("Harga Akhir " + tBioskop.hitungHargaAkhir());
+        System.out.println("===Data Tiket===");
+        System.out.println("Film : " + tBioskop.getFilm());
+        System.out.println("Hari : " + tBioskop.getHari());
+        System.out.println("Jam : " + tBioskop.getJam());
+        System.out.println("Harga Awal : " + tBioskop.getHarga());
+        System.out.println("Harga Akhir " + tBioskop.hitungHargaAkhir());
     }
 }

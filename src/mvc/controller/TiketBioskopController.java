@@ -59,12 +59,14 @@ public class TiketBioskopController {
             harga = input.nextDouble();
 
             if (harga <= 25000) {
-                System.out.print("Harga tidak boleh kosong ! ");
+                System.out.println("Harga tidak boleh < 25000 ! ");
             }
         } while (harga <= 25000);
 
         TiketBioskop modelTiketBioskop = new TiketBioskop(film, hari, jam, harga);
 
         TiketBioskopView viewTiketBioskopView = new TiketBioskopView();
+        viewTiketBioskopView.tampilkanTiket(modelTiketBioskop);
+        input.close();
     }
 }
