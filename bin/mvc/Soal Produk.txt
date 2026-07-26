@@ -1,0 +1,72 @@
+SOAL VARIASI 7 (Tema: Data Produk dengan Diskon Bertingkat)
+Tema: Data Produk Diskon
+Fokus: Validasi input + perhitungan diskon bertingkat berdasarkan kategori dan jumlah pembelian.
+
+Buat program MVC untuk data ProdukDiskon dengan spesifikasi:
+
+Model (ProdukDiskon):
+
+Variabel: String namaProduk, String kategori, double harga, int jumlahBeli   
+
+Constructor: isi semua data
+
+Getter & Setter: untuk semua variabel
+
+Tambahan method: public double hitungTotalBayar() dengan aturan:
+
+Diskon berdasarkan kategori:
+
+"Elektronik" → 10%
+
+"Pakaian" → 5%
+
+"Makanan" → 3%
+
+Diskon tambahan berdasarkan jumlah beli:
+
+= 10 → tambahan 5%
+
+= 5 → tambahan 2%
+
+Total diskon = diskon kategori + diskon jumlah (bisa ditumpuk)
+
+Total bayar = harga × jumlahBeli × (1 - total diskon)
+
+View (ProdukDiskonView):
+
+Tampilkan semua data + rincian diskon dan total bayar
+
+Controller (ProdukDiskonController):
+
+Minta input dari user pake Scanner
+
+Validasi input:
+
+Nama produk tidak boleh kosong
+
+Kategori harus salah satu: "Elektronik", "Pakaian", "Makanan"
+
+Harga minimal 1000
+
+Jumlah beli minimal 1
+
+Main (ProdukDiskonMVC):
+
+Panggil Controller
+
+📝 CONTOH OUTPUT:
+text
+Masukkan nama produk: Laptop
+Masukkan kategori (Elektronik/Pakaian/Makanan): Elektronik
+Masukkan harga: 5000000
+Masukkan jumlah beli: 10
+
+=== DATA PRODUK ===
+Nama Produk : Laptop
+Kategori : Elektronik
+Harga : 5000000.0
+Jumlah Beli : 10
+Diskon Kategori : 10.0%
+Diskon Jumlah : 5.0%
+Total Diskon : 15.0%
+Total Bayar : 42500000.0
