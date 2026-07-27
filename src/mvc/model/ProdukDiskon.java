@@ -48,6 +48,6 @@ public class ProdukDiskon {
     }
 
     public double hitungTotalBayar() {
-
+        System.out.println();
     }
 }
