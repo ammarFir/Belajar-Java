@@ -48,6 +48,51 @@ public class ProdukDiskon {
     }
 
     public double hitungTotalBayar() {
-        System.out.println();
+
+        double diskonKategori = 0;
+        if (kategori.equals("Elektronik")) {
+            diskonKategori = 0.1;
+        } else if (kategori.equals("Pakaian")) {
+            diskonKategori = 0.05;
+        } else if (kategori.equals("Makanan")) {
+            diskonKategori = 0.03;
+        }
+
+        double diskonJumlah = 0;
+        if (jumlahBeli >= 10) {
+            diskonJumlah = 0.05;
+        } else if (jumlahBeli >= 5) {
+            diskonJumlah = 0.03;
+        }
+
+        double totalDiskon = diskonKategori + diskonJumlah;
+        double totalBayar = harga * jumlahBeli * (1 - totalDiskon);
+
+        return totalBayar;
+    }
+
+    public double getDiskonKategori() {
+        double diskonKategori = 0;
+        if (kategori.equals("Elektronik")) {
+            diskonKategori = 0.1;
+        } else if (kategori.equals("Pakaian")) {
+            diskonKategori = 0.05;
+        } else if (kategori.equals("Makanan")) {
+            diskonKategori = 0.03;
+        }
+
+        return diskonKategori;
+
+    }
+
+    public double getDiskonJumlah() {
+        double diskonJumlah = 0;
+        if (jumlahBeli >= 10) {
+            diskonJumlah = 0.05;
+        } else if (jumlahBeli >= 5) {
+            diskonJumlah = 0.03;
+        }
+
+        return diskonJumlah;
     }
 }
