@@ -38,8 +38,7 @@ public class ProdukDiskonController {
             }
         } while (!valid);
 
-
-        ProdukDiskonView
+        ProdukDiskon mProdukDiskon = new ProdukDiskon(namaProduk, kategori, harga, jumlahBeli);
     }
 
 }
