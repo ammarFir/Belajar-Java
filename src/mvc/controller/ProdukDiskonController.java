@@ -38,7 +38,30 @@ public class ProdukDiskonController {
             }
         } while (!valid);
 
+        double harga;
+        do {
+            System.out.println("Masukkan harga : ");
+            harga = input.nextDouble();
+
+            if (harga < 1000) {
+                System.out.println("Harga minimal 1000 !");
+            }
+        } while (harga < 1000);
+
+        int jumlahBeli;
+        do {
+            System.out.println("Masukkan jumlah : ");
+            jumlahBeli = input.nextInt();
+
+            if (jumlahBeli < 1) {
+                System.out.println("Minimal beli 1 !");
+            }
+        } while (jumlahBeli < 1);
+
         ProdukDiskon mProdukDiskon = new ProdukDiskon(namaProduk, kategori, harga, jumlahBeli);
+        ProdukDiskonView pDiskonView = new ProdukDiskonView();
+        pDiskonView.tampilkanProdukDiskon(mProdukDiskon);
+        input.close();
     }
 
 }
