@@ -12,7 +12,7 @@ public class ProdukDiskonController {
         // iterasi nama produk
         String namaProduk;
         do {
-            System.out.println("Masukkan nama produk : ");
+            System.out.print("Masukkan nama produk : ");
             namaProduk = input.nextLine();
 
             if (namaProduk.trim().equals("")) {
@@ -27,7 +27,7 @@ public class ProdukDiskonController {
         Boolean valid;
         do {
             valid = false;
-            System.out.println("Masukkan kategori produk : ");
+            System.out.print("Masukkan kategori produk : ");
             kategori = input.nextLine();
 
             for (int i = 0; i < kategoriValid.length; i++) {
@@ -40,7 +40,7 @@ public class ProdukDiskonController {
 
         double harga;
         do {
-            System.out.println("Masukkan harga : ");
+            System.out.print("Masukkan harga : ");
             harga = input.nextDouble();
 
             if (harga < 1000) {
@@ -50,7 +50,7 @@ public class ProdukDiskonController {
 
         int jumlahBeli;
         do {
-            System.out.println("Masukkan jumlah : ");
+            System.out.print("Masukkan jumlah : ");
             jumlahBeli = input.nextInt();
 
             if (jumlahBeli < 1) {
