@@ -2,7 +2,7 @@ package mvc.controller;
 
 import mvc.model.ProdukDiskon;
 import mvc.view.ProdukDiskonView;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProdukDiskonController {
 
