@@ -9,10 +9,12 @@ public class ProdukDiskonView {
         System.out.println("Nama Kategori : " + pDiskon.getKategori());
         System.out.println("Harga Produk : " + pDiskon.getHarga());
         System.out.println("Jumlah Beli : " + pDiskon.getjumlahBeli());
-        System.out.println("Diskon Kategori : " + pDiskon.getDiskonKategori());
-        System.out.println("Diskon Jumlah : " + pDiskon.getDiskonJumlah());
-        System.out.println("Total Diskon : " + pDiskon.getDiskonJumlah() + pDiskon.getDiskonKategori());
-        System.out.println("Total Bayar : " + pDiskon.hitungTotalBayar());
+        System.out.println("Diskon Kategori : " + pDiskon.getDiskonKategori() * 100 + "%");
+        System.out.println("Diskon Jumlah : " + pDiskon.getDiskonJumlah() * 100 + "%");
+        System.out.println("Total Diskon : "
+                + String.format("%.1f", (pDiskon.getDiskonKategori() + pDiskon.getDiskonJumlah()) * 100));
+        System.out.println("Total Bayar : "
+                + String.format("%.1f", pDiskon.hitungTotalBayar()));
 
     }
 }

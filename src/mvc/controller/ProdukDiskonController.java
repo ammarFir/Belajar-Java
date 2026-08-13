@@ -27,7 +27,7 @@ public class ProdukDiskonController {
         Boolean valid;
         do {
             valid = false;
-            System.out.print("Masukkan kategori produk : ");
+            System.out.print("Masukkan kategori (Elektronik/Pakaian/Makanan) : ");
             kategori = input.nextLine();
 
             for (int i = 0; i < kategoriValid.length; i++) {
@@ -50,7 +50,7 @@ public class ProdukDiskonController {
 
         int jumlahBeli;
         do {
-            System.out.print("Masukkan jumlah : ");
+            System.out.print("Masukkan jumlah beli : ");
             jumlahBeli = input.nextInt();
 
             if (jumlahBeli < 1) {
