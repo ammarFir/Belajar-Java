@@ -1,0 +1,67 @@
+Tema: Data Transaksi
+Fokus: Validasi input + perhitungan total bayar dengan pajak 11%.
+
+Buat program MVC untuk data Transaksi dengan spesifikasi:
+
+Model (Transaksi):
+
+Variabel: String namaBarang, int jumlah, double hargaSatuan, String metodeBayar
+
+Constructor: isi semua data
+
+Getter & Setter: untuk semua variabel
+
+Tambahan method:
+
+public double hitungSubTotal() → jumlah × hargaSatuan
+
+public double hitungPajak() → 11% dari subTotal
+
+public double hitungTotalBayar() → subTotal + pajak
+
+public double getDiskon() → metodeBayar "Tunai" dapat diskon 2%, selain itu 0%
+
+View (TransaksiView):
+
+Tampilkan semua data + rincian (subtotal, pajak, diskon, total bayar)
+
+Controller (TransaksiController):
+
+Minta input dari user pake Scanner
+
+Validasi input:
+
+Nama barang tidak boleh kosong
+
+Jumlah minimal 1
+
+Harga satuan minimal 1000
+
+Metode bayar harus "Tunai" atau "Transfer"
+
+Main (TransaksiMVC):
+
+Panggil Controller
+
+📝 CONTOH OUTPUT:
+text
+Masukkan nama barang: Laptop
+Masukkan jumlah: 2
+Masukkan harga satuan: 5000000
+Masukkan metode bayar (Tunai/Transfer): Tunai
+
+=== DATA TRANSAKSI ===
+Nama Barang : Laptop
+Jumlah : 2
+Harga Satuan : 5000000.0
+Metode Bayar : Tunai
+Subtotal : 10000000.0
+Pajak (11%) : 1100000.0
+Diskon (2%) : 200000.0
+Total Bayar : 10900000.0
+✅ RULES:
+Komponen	Yang Harus Ada
+Model	Constructor, Getter/Setter, method hitungSubTotal(), hitungPajak(), hitungTotalBayar(), getDiskon()
+View	Print semua data + rincian
+Controller	Validasi input semua data
+Main	Panggil Controller
