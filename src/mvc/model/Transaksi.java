@@ -21,11 +21,11 @@ public class Transaksi {
         return jumlah;
     }
 
-    public double hargaSatuan() {
+    public double getHargaSatuan() {
         return hargaSatuan;
     }
 
-    public String metodeBayar() {
+    public String getMetodeBayar() {
         return metodeBayar;
     }
 
@@ -41,7 +41,7 @@ public class Transaksi {
         this.hargaSatuan = hargaSatuan;
     }
 
-    public void setMetodeBayar() {
+    public void setMetodeBayar(String metodeBayar) {
         this.metodeBayar = metodeBayar;
     }
 }
