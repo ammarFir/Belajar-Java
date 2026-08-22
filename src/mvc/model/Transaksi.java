@@ -44,4 +44,31 @@ public class Transaksi {
     public void setMetodeBayar(String metodeBayar) {
         this.metodeBayar = metodeBayar;
     }
+
+    public double hitungSubTotal() {
+        double subTotal = jumlah * hargaSatuan;
+        return subTotal;
+    }
+
+    public double hitungPajak() {
+        double pajak = hitungSubTotal() * 0.11;
+
+        return pajak;
+    }
+
+    public double hitungTotalBayar() {
+        double totalBayar = hitungSubTotal() + hitungPajak() - getDiskon();
+        return totalBayar;
+    }
+
+    public double getDiskon() {
+        double diskon = 0;
+        if (metodeBayar.equalsIgnoreCase("Tunai")) {
+            diskon = hitungSubTotal() * 0.02;
+        } else {
+            diskon = 0;
+        }
+        return diskon;
+
+    }
 }

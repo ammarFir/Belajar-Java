@@ -65,3 +65,4 @@ Model	Constructor, Getter/Setter, method hitungSubTotal(), hitungPajak(), hitung
 View	Print semua data + rincian
 Controller	Validasi input semua data
 Main	Panggil Controller
+belym kelar
