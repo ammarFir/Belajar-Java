@@ -3,6 +3,7 @@ package mvc.controller;
 import mvc.model.Film;
 import mvc.view.FilmView;
 import java.util.*;
+import mvc.controller.*;
 
 public class FilmController {
     // dklarasi object
