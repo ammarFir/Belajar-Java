@@ -25,23 +25,19 @@ public class FilmController {
             System.out.println("3.Tampilkan Semua Film");
             System.out.println("4.Keluar ");
 
-            System.out.println("Masukkan Pilihan");
-            System.out.println(" ");
+            System.out.print("Masukkan Pilihan :      ");
             pilihan = input.nextInt();
             input.nextLine();
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("Masukkan Nama Judul");
-                    System.out.println(" ");
+                    System.out.print("Masukkan Nama Judul :   ");
                     String judul = input.nextLine();
 
-                    System.out.println("Masukkan Nama Sutradara");
-                    System.out.println(" ");
+                    System.out.print("Masukkan Nama Sutradara :  ");
                     String sutradara = input.nextLine();
 
-                    System.out.println("Masukkan Tahun Film");
-                    System.out.println(" ");
+                    System.out.print("Masukkan Tahun Film :  ");
                     int tahun = input.nextInt();
 
                     // deklarasi object film baru dari object film yg sudah ada
@@ -52,8 +48,7 @@ public class FilmController {
                 case 2:
                     filmView.tampilkanSemua(film);
 
-                    System.out.println("Masukkan Nomor film yang mau dihapus");
-                    System.out.println();
+                    System.out.print("Masukkan Nomor film yang mau dihapus :  ");
                     int nomorHapus = input.nextInt();
 
                     film.remove(nomorHapus - 1);
@@ -74,5 +69,7 @@ public class FilmController {
                     break;
             }
         } while (pilihan != 4);
+
+        input.close();
     }
 }
