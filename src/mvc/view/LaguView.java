@@ -15,8 +15,8 @@ public class LaguView {
         int detik = daftarLagu.get(i).getDurasi() % 60;
             System.out.println((i + 1) + ". " +
                     daftarLagu.get(i).getJudul() + " - " +
-                    daftarLagu.get(i).getPenyanyi() + "( " +
-                    menit  + " menit " + detik + " detik " );
+                    daftarLagu.get(i).getPenyanyi() + " ( " +
+                    menit  + " menit " + detik + " detik ) " );
 
         }
     }
