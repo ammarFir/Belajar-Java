@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class LaguView {
 
     public void tampilkanSemua(ArrayList<Lagu> daftarLagu) {
-        System.out.println("====== Data Lagu =====");
+        System.out.println("=== Data Lagu ===");
 
         for (int i = 0; i < daftarLagu.size(); i++) {
                  int menit = daftarLagu.get(i).getDurasi() / 60;

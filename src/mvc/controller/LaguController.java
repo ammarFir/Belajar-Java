@@ -59,17 +59,19 @@ public class LaguController {
             break;
 
             case 3:
-                System.out.print("Masukkan judul lagu yg dicari : ");
+                System.out.print("Masukkan judul lagu : ");
                 
                 //menampung input user
                 String judulCari =  input.nextLine();
                 //sebagai status lagu ditemukan
                 boolean hasilCari = false;
 
+                System.out.println("Hasil pencarian : ");
+
                 //perulangan seluruh lagu 
                 for (int i = 0 ; i < laguArrayList.size() ; i++) {
                     //cek jika 
-                    if (laguArrayList.get(i).getJudul().equalsIgnoreCase(judulCari)) {
+                    if (laguArrayList.get(i).getJudul().toLowerCase().contains(judulCari.toLowerCase())) {
                         lView.tampilkanHasilCari(laguArrayList.get(i));
                         hasilCari = true;
                     } 
@@ -109,7 +111,8 @@ public class LaguController {
 
         } while (pilihanUser != 5);
 
+       input.close();
 
-        
     }
+     
 }
