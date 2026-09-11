@@ -5,7 +5,7 @@ import mvc.view.NasabahView;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.util.random.*;
+
 
 public class NasabahController {
     public void tampilkanData() {
