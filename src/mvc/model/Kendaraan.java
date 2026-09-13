@@ -19,11 +19,11 @@ public class Kendaraan {
         return  tahun;
     }
 
-    public void setMerek() {
+    public void setMerek(String merek) {
         this.merek = merek;
     }
 
-    public  void  setTahun () {
+    public  void  setTahun (int tahun) {
         this.tahun = tahun;
     }
 
