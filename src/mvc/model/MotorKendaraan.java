@@ -28,6 +28,12 @@ public class MotorKendaraan  extends Kendaraan {
         "Jenis : " + jenis);
     }
 
+
+    @Override 
+    public void bergerak () {
+        System.out.println(merek + " melaju di jalan tol... ");
+    }
+
     public  void gasPol () {
         System.out.println(merek + " ngegas pol !");
     }
