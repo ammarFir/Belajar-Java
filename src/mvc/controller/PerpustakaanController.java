@@ -107,6 +107,7 @@ public class PerpustakaanController {
                 int nomorUrut = input.nextInt();
 
                 daftarItem.get(nomorUrut - 1).dipinjam();
+                System.out.println("");
   
                     break;
             
@@ -147,5 +148,6 @@ public class PerpustakaanController {
                     break;
             }
         } while (pilihanUser != 7);
+        //akhir perulangan
     }
 }
