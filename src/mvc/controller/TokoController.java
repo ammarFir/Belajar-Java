@@ -16,7 +16,7 @@ public class TokoController {
         public void tampilkanMenu () {
 
             do {
-                 System.out.println("=== Selamat Datang ===");
+                 System.out.println("=== MENU TOKO ELEKTRONIK ===");
             System.out.println("1. Tambah HP ");
             System.out.println("2. Tambah Laptop ");
             System.out.println("3. Tampilkan Semua Produk");
@@ -66,6 +66,7 @@ public class TokoController {
 
                         System.out.print("Harga Laptop : ");
                         int harga = input.nextInt();
+                        input.nextLine();
                         
                         System.out.print("Processor Laptop : ");
                         String processor = input.nextLine();
@@ -82,19 +83,38 @@ public class TokoController {
                     break;
             
                 case 3:
+                    view.tampilkanSemua(daftarProduk);
                     
                     break;
             
                 case 4:
+                    view.tampilkanSemua(daftarProduk);
+                    int nomorUrut = 0;
                     
+                    System.out.print("No Produk : ");
+                    nomorUrut = input.nextInt();
+
+                    double hasilDiskon = daftarProduk.get(nomorUrut - 1).diskon();
+                    System.out.println("Diskon : " + hasilDiskon);
+
+
                     break;
             
                 case 5:
+                    view.tampilkanSemua(daftarProduk);
+
+                    int noHapus = 0;
+                    
+                    System.out.print("No produk yg mau dihapus : ");
+                    noHapus = input.nextInt();
+
+                    daftarProduk.remove(noHapus -1 );
+                    System.out.println(" ");
                     
                     break;
             
                 case 6:
-                    
+                    view.tampilkanPesan("thenks");
                     break;
             
                 default:
