@@ -8,5 +8,15 @@ public abstract class Bentuk {
         this.nama = nama;
     }
 
+    public String getNama () {
+        return  nama;
+    }
+
+    public void setNama (String nama) {
+        this.nama = nama;
+    }
+
     public abstract double hitungLuas();
+
+    public  abstract double hitungKeliling();
 }
