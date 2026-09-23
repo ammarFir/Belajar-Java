@@ -25,6 +25,23 @@ public class KartuKredit implements MetodePembayaran , BisaRefund{
         this.nomorKartu = paramNomorKartu;
     }
 
+    double biayaAdmin;
+
+    @Override
+    public double prosesBayar(double jumlah) {
+        // TODO Auto-generated method stub
+        if (jumlah > 5000000 ) {
+             biayaAdmin = jumlah * 0.02;
+            
+        } else if (jumlah <= 5000000){
+            biayaAdmin = jumlah * 0.015;
+            
+        }
+
+        return  biayaAdmin;
+       
+    }
+
     @Override
     public String getNamaMetode() {
         // TODO Auto-generated method stub
@@ -36,4 +53,7 @@ public class KartuKredit implements MetodePembayaran , BisaRefund{
     public void refund(double jumlah) {
         System.out.println("Refund Rp. " + jumlah + " ke kartu " + nomorKartu + " (" + namaPemlik + ")");
     }
+
+
+
  }
