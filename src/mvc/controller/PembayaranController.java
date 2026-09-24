@@ -2,6 +2,7 @@ package mvc.controller;
 import mvc.view.PembayaranView;
 import  mvc.model.MetodePembayaran;
 import mvc.model.KartuKredit;
+import mvc.model.BisaRefund;
 import mvc.model.EWallet;
 import mvc.model.TransferBank;
 import java.util.*;
@@ -93,6 +94,37 @@ public class PembayaranController {
          case 5: 
          {
 
+            //pilih nama metode
+            System.out.print("No Metode : ");
+            int nomorMetode = input.nextInt();
+
+            //masukkan jumlah
+            System.out.print("Jumlah : ");
+            int jumlah = input.nextInt();
+
+            //penghitungan biaya admin
+            //ambil nama metode , lalu ambil metode by index - 1, lalu proses bayar dari input jumlah
+            double biayaAdmin =   daftarMetode.get(nomorMetode - 1).prosesBayar(jumlah);
+
+            //tampilkan biaya admin by index dan nama metode di parameter
+            view.tampilkanBiayaAdmin(daftarMetode.get(nomorMetode - 1).getNamaMetode(), biayaAdmin);
+            
+
+         }
+
+         case 6: 
+         {
+            System.out.println("No Metode : ");
+            int nomorMetode = input.nextInt();
+
+            if (daftarMetode.get( nomorMetode - 1) instanceof BisaRefund) {
+                System.out.println("Jumlah Refund : ");
+                double jumlahRefund = input.nextDouble();
+                
+                //objek daftar metode by index dicek/dicasting objeknya dngn bisa refund lalu panggil by object tsb fungsi .refund
+                ((BisaRefund)   daftarMetode.get(nomorMetode - 1)).refund(jumlahRefund);
+                System.out.println("E-Wallet tidak bisa refund!");
+            }
          }
          
             default:
