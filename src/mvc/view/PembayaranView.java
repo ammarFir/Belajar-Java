@@ -6,7 +6,7 @@ public class PembayaranView {
         for (int index = 0 ; index < daftarMetode.size(); index++) {
             //ambil objek pembayaran pada index tertentu , lalu ambil nama metode nya
              //print nama metode yg diambil dari index daftar metode
-                System.out.println(daftarMetode.get(index).getNamaMetode());
+                System.out.println((index + 1) + ". "  + daftarMetode.get(index).getNamaMetode());
 
                 
     }

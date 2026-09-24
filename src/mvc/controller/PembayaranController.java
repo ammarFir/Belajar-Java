@@ -18,7 +18,7 @@ public class PembayaranController {
     public void tampilkanMenu () {
         
         do {
-            
+        System.out.println("");
         System.out.println("== MENU PEMBAYARAN ===");
         System.out.println("1. Tambah Transfer Bank");
         System.out.println("2. Tambah E-Wallet");
@@ -29,20 +29,23 @@ public class PembayaranController {
         System.out.println("7. Keluar");
         
 
-        System.out.print("Pilihan : ");
+        System.out.print("Pilih : ");
+    
+
         pilihan = input.nextInt();
         input.nextLine();
 
         switch (pilihan) {
         case 1:{
+            System.out.println("");
             System.out.println("=== MENU PEMBAYARAN ===");
+            System.out.println("");
             System.out.print("Nama Bank : ");
             String namaBank = input.nextLine();
 
             System.out.print("No Rekening : ");
             String noRekening = input.nextLine();
 
-            input.nextLine();
 
             TransferBank objekItem = new TransferBank(namaBank, noRekening);
             daftarMetode.add(objekItem);
@@ -51,16 +54,16 @@ public class PembayaranController {
     }
 
         case 2:{ 
-
+            System.out.println("");
             System.out.println("=== MENU PEMBAYARAN ===");
+            System.out.println("");
             
-            System.out.println("Nama E-Wallet : ");
+            System.out.print("Nama E-Wallet : ");
             String namaWallet = input.nextLine();
 
-            System.out.println("No HP : ");
+            System.out.print("No HP : ");
             String noHP = input.nextLine();
 
-            input.nextLine();
 
             EWallet objekItem = new EWallet(namaWallet, noHP);
             daftarMetode.add(objekItem);
@@ -70,15 +73,17 @@ public class PembayaranController {
          }   
 
          case 3:{
+            System.out.println("");
             System.out.println("=== MENU PEMBAYARAN ===");
+            System.out.println("");
             
-            System.out.println("Nama Kartu Kredit : ");
+            System.out.print("Nomor Kartu Kredit : ");
             String nomorKartu = input.nextLine();
 
-            System.out.println("Nama Pemilik : ");
+            System.out.print("Nama Pemilik : ");
             String namaPemilik = input.nextLine();
 
-            input.nextLine();
+            
 
             KartuKredit objekItem = new KartuKredit(nomorKartu, namaPemilik);
             daftarMetode.add(objekItem);
@@ -86,7 +91,9 @@ public class PembayaranController {
          } 
          case 4: 
          {
+            System.out.println("");
             System.out.println("=== DAFTAR METODE ===");
+            System.out.println("");
 
             view.tampilkanSemua(daftarMetode);
             break;
@@ -109,6 +116,7 @@ public class PembayaranController {
             //tampilkan biaya admin by index dan nama metode di parameter
             view.tampilkanBiayaAdmin(daftarMetode.get(nomorMetode - 1).getNamaMetode(), biayaAdmin);
             
+            break;
 
          }
 
@@ -118,13 +126,16 @@ public class PembayaranController {
             int nomorMetode = input.nextInt();
 
             if (daftarMetode.get( nomorMetode - 1) instanceof BisaRefund) {
-                System.out.println("Jumlah Refund : ");
+                System.out.print("Jumlah Refund : ");
                 double jumlahRefund = input.nextDouble();
                 
                 //objek daftar metode by index dicek/dicasting objeknya dngn bisa refund lalu panggil by object tsb fungsi .refund
                 ((BisaRefund)   daftarMetode.get(nomorMetode - 1)).refund(jumlahRefund);
-                System.out.println("E-Wallet tidak bisa refund!");
+               
+            } else {
+                 System.out.println("E-Wallet tidak bisa refund!");
             }
+            break;
          }
          
             default:
