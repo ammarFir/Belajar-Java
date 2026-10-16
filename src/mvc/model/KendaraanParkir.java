@@ -6,12 +6,12 @@ public class KendaraanParkir {
     private boolean sudahKeluar;
 
 
-    public KendaraanParkir (String platNomor, String jenis, int jamMasuk , int jamKeluar, boolean sudahKeluar) {
+    public KendaraanParkir (String platNomor, String jenis, int jamMasuk ) {
         this.platNomor = platNomor;
         this.jenis = jenis;
         this.jamMasuk = jamMasuk;
-        this.jamKeluar = jamKeluar;
-        this.sudahKeluar = sudahKeluar;
+        this.jamKeluar = 0;
+        this.sudahKeluar = false;
     }
 
     public String getPlatNomor () {
@@ -22,15 +22,15 @@ public class KendaraanParkir {
         return  jenis;
     }
 
-    public int jamMasuk () {
+    public int getJamMasuk () {
         return  jamMasuk;
     }
 
-    public int jamKeluar () {
+    public int getJamKeluar () {
         return  jamKeluar;
     }
 
-    public boolean sudahKeluar () {
+    public boolean isSudahKeluar () {
         return sudahKeluar;
     }
 
@@ -47,13 +47,25 @@ public class KendaraanParkir {
     }
 
     public  void setJamKeluar (int jamKeluar) {
-        this.jamKeluar = 0;
+        this.jamKeluar = jamKeluar;
     }
 
-    public void sudahKeluar (boolean sudahKeluar) {
-        this.sudahKeluar = false;
+    public void setSudahKeluar (boolean sudahKeluar) {
+        this.sudahKeluar = sudahKeluar;
     }
  
+    public int getLamaParkir () {
+        if (!sudahKeluar) {
+            return  0;
+        } else {
+            return jamKeluar - jamMasuk;
+        }
+    }
+
+    public  void keluar (int jamKeluar) {
+        this.jamKeluar = jamKeluar;
+        this.sudahKeluar = true;
+    }
 
 
 }
