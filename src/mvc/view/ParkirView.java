@@ -1,7 +1,9 @@
-package mvc.model;
+package mvc.view;
 import java.util.ArrayList;
+
+import mvc.model.KendaraanParkir;
 public class ParkirView {
-    
+
     public void tampilkanSemua(ArrayList <KendaraanParkir> daftarParkir) {
         for (int i = 0 ; i < daftarParkir.size(); i++) {
             System.out.println(" === DAFTAR SEMUA KENDARAAN === ");
@@ -11,17 +13,11 @@ public class ParkirView {
                                 + daftarParkir.get(i).getJenis() + " - "
                                 + "(Masuk: Jam " + daftarParkir.get(i).getJamMasuk() + ")" + " - "
                                 //data is sudah keluar dibandingkan lalu jika true ato false gabungkan dengan text hasil validasi
-                                + (daftarParkir.get(i).isSudahKeluar()
-                                                                     ? "Sudah Keluar"   
-                                                                     : "Masih Parkir")
-        );
-        }
-
+                                + (daftarParkir.get(i).isSudahKeluar()? "Sudah Keluar" : "Masih Parkir")
+        ); }
     }
-
     public void tampilkanYangMasihParkir(ArrayList <KendaraanParkir> daftarParkir) {
         boolean adaYangParkir = false;
-     
         for (int index = 0; index < daftarParkir.size(); index++) {
                if (!daftarParkir.get(index).isSudahKeluar()) {
                 adaYangParkir = true;
@@ -30,21 +26,16 @@ public class ParkirView {
                             +daftarParkir.get(index).getPlatNomor() + " - "
                             +daftarParkir.get(index).getJenis() + " - "
                             + "(Masuk : Jam " + daftarParkir.get(index).getJamMasuk() + " ) "
-                            + (daftarParkir.get(index).isSudahKeluar())
-            );
-               } 
-        }
-
+                            + "Masih Parkir"
+        );} 
+    }
         if(!adaYangParkir) {
             System.out.println("Tidak ada kendaraan yang parkir");
-        }
-    }
+           }}
 
-    public void tampilkanPesan (String pesan)
-        {
+    public void tampilkanPesan (String pesan){
             System.out.println(pesan);
         }
-
         public void tampilkanStruk (String struk) {
             System.out.println(struk);
         }
