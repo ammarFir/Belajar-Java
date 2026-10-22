@@ -74,9 +74,13 @@ public class ParkirController {
                     System.out.println("Masukkan jam valid (0 - 23)");
                     System.out.println("Jam Keluar");
                     jamKeluar = input.nextInt();
+                    System.out.println("ngeleg baget nih jaringan , gabissa ngoding woyy");
                 }
-
                 
+                
+                view.tampilkanPesan("Kendaraan " + kendaraan.getPlatNomor() + " sudah keluar");
+
+
                 
                 break;
         
