@@ -67,18 +67,18 @@ public class ParkirController {
 
                 System.out.print("Plat : ");
                 String plat = input.next();
+                boolean hasil = false;
 
-                System.out.print("Jam Keluar : ");
-                int jamKeluar = input.nextInt();
-                while (jamKeluar < 0 || jamKeluar > 23) {
-                    System.out.println("Masukkan jam valid (0 - 23)");
-                    System.out.println("Jam Keluar");
-                    jamKeluar = input.nextInt();
-                    System.out.println("ngeleg baget nih jaringan , gabissa ngoding woyy");
-                }
-                
-                
-                view.tampilkanPesan("Kendaraan " + kendaraan.getPlatNomor() + " sudah keluar");
+               for (int index = 0 ; index < daftarParkir.size(); index++) {
+                if (daftarParkir.get(index).getPlatNomor().equalsIgnoreCase(plat)){
+                    System.out.println("Kendaraan " + plat + " sudah keluar!");
+                    hasil = true;
+                } 
+               }
+
+               if (!hasil) {
+                System.out.println("Kendaraan dengan plat "  + plat + " tidak ditemukan!");
+               }
 
 
                 
