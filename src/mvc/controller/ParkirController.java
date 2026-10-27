@@ -1,6 +1,8 @@
 package mvc.controller;
 
 import mvc.model.KendaraanParkir;
+import mvc.model.TarifParkir;
+
 import java.util.ArrayList;
 import java.util.*;
 import mvc.view.ParkirView;
@@ -71,8 +73,25 @@ public class ParkirController {
 
                for (int index = 0 ; index < daftarParkir.size(); index++) {
                 if (daftarParkir.get(index).getPlatNomor().equalsIgnoreCase(plat)){
-                    System.out.println("Kendaraan " + plat + " sudah keluar!");
                     hasil = true;
+                    if (daftarParkir.get(index).isSudahKeluar() == true) {
+                        System.out.println("Kendaraan " + plat + " sudah keluar !");
+                    } else {
+                        int jamKeluar, jamMasuk;
+                        System.out.print("Jam Keluar : ");
+                        jamKeluar = input.nextInt();
+                        jamMasuk = daftarParkir.get(index).getJamMasuk();
+                        while (jamKeluar <= jamMasuk || jamKeluar > 24) {
+                            System.out.println("jam keluar tidak valid");
+                            System.out.print("Jam Keluar : ");
+                            jamKeluar = input.nextInt();
+                        }
+                        daftarParkir.get(index).keluar(jamKeluar);
+                        double tarif = TarifParkir.hitungTarif(daftarParkir.get(index).getJenis(), daftarParkir.get(index).getLamaParkir());
+                        TarifParkir.getStruk(daftarParkir.get(index));
+                        view.tampilkanStruk(TarifParkir.getStruk(daftarParkir.get(index)));
+                    }
+
                 } 
                }
 
