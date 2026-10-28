@@ -104,11 +104,15 @@ public class ParkirController {
                 break;
         
             case 3:
+
+               view.tampilkanSemua(daftarParkir);
                 
                 break;
         
             case 4:
-                
+                        
+                    
+
                 break;
         
             case 5:
