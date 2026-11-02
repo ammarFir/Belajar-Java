@@ -28,9 +28,9 @@ public static String getStruk(KendaraanParkir kendaraan) {
     String struk = " === STRUK PARKIR === " 
                     + "\nPlat :  " + kendaraan.getPlatNomor()
                     + "\nJenis : " + kendaraan.getJenis()
-                    + "\nMasuk : " + kendaraan.getJamMasuk()
-                    + "\nKeluar : " + kendaraan.getJamKeluar()
-                    + "\nLama : " + kendaraan.getLamaParkir()
+                    + "\nMasuk : Jam " + kendaraan.getJamMasuk()
+                    + "\nKeluar : Jam " + kendaraan.getJamKeluar()
+                    + "\nLama : " + kendaraan.getLamaParkir() + " jam"
                     + "\nTotal : " + hitungTarif(kendaraan.getJenis(), kendaraan.getLamaParkir() )
                     + "\n=====================";
         

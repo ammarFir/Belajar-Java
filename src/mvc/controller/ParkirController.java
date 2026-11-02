@@ -3,7 +3,6 @@ package mvc.controller;
 import mvc.model.KendaraanParkir;
 import mvc.model.TarifParkir;
 
-import java.util.ArrayList;
 import java.util.*;
 import mvc.view.ParkirView;
 
@@ -17,7 +16,10 @@ public class ParkirController {
 
     public void tampilkanMenu() {
 
+        do {
+                System.out.println("");
         System.out.println("=== SISTEM PARKIR ===");
+        System.out.println("");
         System.out.println("1. Kendaraan Masuk");
         System.out.println("2. Kendaraan Keluar");
         System.out.println("3. Tampilkan Semua");
@@ -34,7 +36,7 @@ public class ParkirController {
                 {System.out.print("Plat : ");
                 String plat = input.next();
 
-                System.out.print("Jenis : ");
+                System.out.print("Jenis (Motor/Mobil/Truk): ");
                 String jenis = input.next();
                 while (!jenis.equalsIgnoreCase("Motor") && 
                       (!jenis.equalsIgnoreCase("Mobil")) &&
@@ -49,7 +51,7 @@ public class ParkirController {
                 int jamMasuk = input.nextInt();
                 while (jamMasuk < 0 || jamMasuk > 23 ) {
                     System.out.println("Masukkan jam valid (0-23)");
-                    System.out.println("Jam Masuk: ");
+                    System.out.print("Jam Masuk: ");
                     jamMasuk = input.nextInt();
                 }
 
@@ -87,9 +89,9 @@ public class ParkirController {
                             jamKeluar = input.nextInt();
                         }
                         daftarParkir.get(index).keluar(jamKeluar);
-                        double tarif = TarifParkir.hitungTarif(daftarParkir.get(index).getJenis(), daftarParkir.get(index).getLamaParkir());
-                        TarifParkir.getStruk(daftarParkir.get(index));
                         view.tampilkanStruk(TarifParkir.getStruk(daftarParkir.get(index)));
+                       
+                       
                     }
 
                 } 
@@ -111,21 +113,37 @@ public class ParkirController {
         
             case 4:
                         
-                    
+                view.tampilkanYangMasihParkir(daftarParkir);
 
                 break;
         
             case 5:
+                double totalPendapatan = 0;
                 
+                for (int i = 0 ; i < daftarParkir.size(); i++) {
+                    if (daftarParkir.get(i).isSudahKeluar() == true) {
+                    totalPendapatan += TarifParkir.hitungTarif(daftarParkir.get(i).getJenis(), daftarParkir.get(i).getLamaParkir());  
+                    }
+                }
+                //menampilkan totalPendapatan dengan dikonversi ke strinf
+                view.tampilkanPesan("Total Pendapatan: Rp " + totalPendapatan);
+
+
                 break;
         
             case 6:
                 
+                view.tampilkanPesan("Terimakasih ! ");
+
                 break;
         
 
             default:
+                view.tampilkanPesan("Pesan Tidak Valid !");
                 break;
-        }
-    }
-}
+            }
+
+                } while (pilihanUser != 6);
+        
+    };
+};

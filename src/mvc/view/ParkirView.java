@@ -5,9 +5,9 @@ import mvc.model.KendaraanParkir;
 public class ParkirView {
 
     public void tampilkanSemua(ArrayList <KendaraanParkir> daftarParkir) {
+        System.out.println(" === DAFTAR SEMUA KENDARAAN === ");
         for (int i = 0 ; i < daftarParkir.size(); i++) {
-            System.out.println(" === DAFTAR SEMUA KENDARAAN === ");
-            System.out.println((i + 1)
+            System.out.println((i + 1 + ". " )
                                     //pakai fungsi array yaitu .get  , ambil dari index lLALU AMBIL GETTER
                                 + daftarParkir.get(i).getPlatNomor() + " - "
                                 + daftarParkir.get(i).getJenis() + " - "
